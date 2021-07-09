@@ -1,0 +1,50 @@
+{
+  "// Based on": "https://github.com/zenclabs/viteshot/blob/028d2ed21ef9ef98b8d68e49caa1f3fc8f2a86a3/package.json",
+  "name": "@footron/controls-cli",
+  "version": "0.1.0",
+  "author": "BYU PCCL",
+  "license": "MIT",
+  "types": "src/index.d.ts",
+  "bin": {
+    "ftcontrols": "lib/cli.js"
+  },
+  "scripts": {
+    "build": "rimraf dist && rollup -c && chmod +x dist/lib/cli.js && cp package.json dist/ && cp README.md dist/",
+    "dev": "ts-node src/cli.ts",
+    "dev:watch": "ts-node-dev src/cli.ts",
+    "release": "yarn build && cd dist && yarn publish"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.4.0",
+    "@types/connect": "^3.4.35",
+    "@types/fs-extra": "^9.0.12",
+    "@types/glob": "^7.1.4",
+    "@types/node": "^16.3.0",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@types/yargs": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "eslint": "^7.30.0",
+    "eslint-plugin-react": "^7.24.0",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "rollup-plugin-preserve-shebangs": "^0.2.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-node": "^10.0.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.1",
+    "@material-ui/icons": "^4.11.2",
+    "connect": "^3.7.0",
+    "fs-extra": "^10.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.53.0",
+    "vite": "^2.4.1",
+    "vite-tsconfig-paths": "^3.3.13",
+    "yargs": "^17.0.1"
+  }
+}
