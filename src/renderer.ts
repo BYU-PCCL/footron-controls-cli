@@ -76,6 +76,9 @@ export async function startRenderer({
     if (req.originalUrl !== "/") {
       return next();
     }
+    // __renderer__.tsx is created at runtime, so we ignore WebStorm's warning
+    // that it can't be found
+    // noinspection HtmlUnknownTarget
     const html = await viteServer.transformIndexHtml(
       req.originalUrl,
       `
