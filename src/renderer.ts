@@ -92,7 +92,6 @@ export async function startRenderer({
         </head>
         <body>
           <div id="root"></div>
-<!--          <script type="module" src="/__main__.tsx"></script>-->
           <script type="module" src="/__renderer__.tsx"></script>
         </body>
       </html>    
