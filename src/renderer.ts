@@ -38,7 +38,7 @@ export async function startRenderer({
     },
     optimizeDeps: {
       entries: [rootComponentPath],
-      include: ["react", "react-dom"],
+      include: ["react", "react-dom", "@footron/controls-client"],
     },
     esbuild: {
       jsxFactory: `jsx`,
