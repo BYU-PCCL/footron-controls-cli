@@ -60,9 +60,6 @@ export async function startRenderer({
       {
         name: "virtual",
         load: async (id) => {
-          // if (id === "/__main__.tsx") {
-          //   return mainContent;
-          // }
           if (id === "/__renderer__.tsx") {
             return rendererContent;
           }
