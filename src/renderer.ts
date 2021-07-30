@@ -108,8 +108,8 @@ export async function startRenderer({
   app.use(viteServer.middlewares);
   let server!: Server;
   const hostname = network ? "0.0.0.0" : undefined;
-  // noinspection HttpUrlsUsage
   const titleMessage = "ftcontrols dev server";
+  // noinspection HttpUrlsUsage
   const listeningMessage = `listening on http://${
     hostname || "localhost"
   }:${port}`;
