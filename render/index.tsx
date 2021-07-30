@@ -27,9 +27,11 @@ function Wrapper({ children }: { children: React.ReactNode }): JSX.Element {
   }, []);
 
   return (
-    <ControlsClientProvider client={controlsClient}>
-      {children}
-    </ControlsClientProvider>
+    <ThemeProvider theme={theme}>
+      <ControlsClientProvider client={controlsClient}>
+        {children}
+      </ControlsClientProvider>
+    </ThemeProvider>
   );
 }
 
@@ -42,12 +44,9 @@ export function render(Component: React.ComponentType): void {
   root.innerHTML = "";
   try {
     ReactDOM.render(
-      // TODO: Add in provider wrapper here
-      <ThemeProvider theme={theme}>
-        <Wrapper>
-          <Component />
-        </Wrapper>
-      </ThemeProvider>,
+      <Wrapper>
+        <Component />
+      </Wrapper>,
       root
     );
   } catch (e) {
