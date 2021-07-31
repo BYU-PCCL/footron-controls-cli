@@ -36,7 +36,7 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@footron/controls-client": "^0.1.13",
+    "@footron/controls-client": "^0.1.14",
     "@material-ui/core": "^4.12.1",
     "@material-ui/icons": "^4.11.2",
     "connect": "^3.7.0",
