@@ -1,6 +1,6 @@
 // Based on https://github.com/zenclabs/viteshot/blob/af01f90dc169f027024c53aef59f68055cdcbde7/renderers/react.ts
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import React, { useEffect } from "react";
+import React, { ReactNode, useEffect } from "react";
 import ReactDOM from "react-dom";
 import {
   ControlsClient,
@@ -19,6 +19,14 @@ const theme = createTheme({
   },
 });
 
+const PageWidth = ({ children }: { children?: ReactNode }): JSX.Element => {
+  return (
+    <main style={{ display: "flex", justifyContent: "center", height: "100%"}}>
+      <div className="page-width-inner">{children}</div>
+    </main>
+  );
+};
+
 function Wrapper({ children }: { children: React.ReactNode }): JSX.Element {
   const controlsClient = new ControlsClient("ws://localhost:8089/in", "");
 
@@ -27,11 +35,13 @@ function Wrapper({ children }: { children: React.ReactNode }): JSX.Element {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <ControlsClientProvider client={controlsClient}>
-        {children}
-      </ControlsClientProvider>
-    </ThemeProvider>
+    <PageWidth>
+      <ThemeProvider theme={theme}>
+        <ControlsClientProvider client={controlsClient}>
+          {children}
+        </ControlsClientProvider>
+      </ThemeProvider>
+    </PageWidth>
   );
 }
 
