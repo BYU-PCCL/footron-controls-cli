@@ -84,6 +84,20 @@ export async function startRenderer({
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <style>
+            /* Default styles from footron-web */
+            body {
+              margin: 0;
+              color: #001e4ccc;
+              background: #f7faff;
+              font-family: "Lato", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+                "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            }
+            a {
+              color: #0065ffcc;
+            }
+            a:visited {
+              color: rgba(55, 0, 255, 0.8);
+            }
             .page-width-inner {
               width: 100%;
               height: 100%;
