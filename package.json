@@ -1,19 +1,22 @@
 {
   "// Based on": "https://github.com/zenclabs/viteshot/blob/028d2ed21ef9ef98b8d68e49caa1f3fc8f2a86a3/package.json",
   "name": "@footron/controls-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "BYU PCCL",
   "license": "MIT",
-  "types": "src/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "bin": {
-    "ftcontrols": "lib/cli.js"
+    "ftcontrols": "dist/lib/cli.js"
   },
   "scripts": {
-    "build": "rimraf dist && rollup -c && chmod +x dist/lib/cli.js && cp package.json dist/ && cp README.md dist/",
+    "build": "rimraf dist && rollup -c && chmod +x dist/lib/cli.js",
     "dev": "ts-node src/cli.ts",
     "dev:watch": "ts-node-dev src/cli.ts",
     "release": "yarn build && cd dist && yarn publish"
   },
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@emotion/react": "^11.4.0",
     "@types/connect": "^3.4.35",

@@ -191,7 +191,7 @@ __metadata:
     vite-tsconfig-paths: ^3.3.13
     yargs: ^17.0.1
   bin:
-    ftcontrols: lib/cli.js
+    ftcontrols: dist/lib/cli.js
   languageName: unknown
   linkType: soft
 
