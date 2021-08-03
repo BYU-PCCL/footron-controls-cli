@@ -1,7 +1,7 @@
 {
   "// Based on": "https://github.com/zenclabs/viteshot/blob/028d2ed21ef9ef98b8d68e49caa1f3fc8f2a86a3/package.json",
   "name": "@footron/controls-cli",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "author": "BYU PCCL",
   "license": "MIT",
   "types": "dist/src/index.d.ts",
